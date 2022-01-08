@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-
+    transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>New</title>
+        <style type="text/css">
+            table {
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            th, td {
+                padding: 15px;
+                vertical-align: middle;
+                text-align: center;
+            }
+            .container {
+                width: 400px;
+                margin-right: auto;
+                margin-left: auto;
+                border: 1px solid dodgerblue;              
+                height: 400px;
+            }
+            p, h3{
+                margin-left: 5px;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <h3>
+                Product <h:outputText value="create" rendered="#{prodMBean.isCreate}"/>
+            </h3>
+            <p>Add new product:</p>
+            <f:view>
+                <h:form id="PeoductCreateOrEditForm">
+                    <table>
+                            <tr>
+                                <th>Name</th>
+                                <td><h:inputText value="#{prodMBean.selected.name}"/></td>
+                            </tr>
+                            <tr>
+                                <th>Unit</th>
+                                <td><h:inputText value="#{prodMBean.selected.unit}"/></td>
+                            </tr>
+                            <tr>
+                                <th>Price/Unit</th>
+                                <td><h:inputText value="#{prodMBean.selected.unitPrice}"/></td>
+                            </tr>
+                            <tr>
+                                <th>Quantity</th>
+                                <td> <h:inputText value="#{prodMBean.selected.quantity}"/></td>
+                            </tr>
+                            <tr>
+                                <td> <ui:include src="/goBack.xhtml"/></td>
+                                <td><h:commandButton value="Create" action="#{prodMBean.endCreate}" rendered="#{prodMBean.isCreate}"/></td>
+                            </tr>
+                    </table>
+                    <br/>       
+                </h:form>
+            </f:view>
+        </div>
+    </h:body>
+</html>

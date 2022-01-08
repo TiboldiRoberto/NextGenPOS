@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <parent>
+        <groupId>ro.ulbs.ip.an3</groupId>
+        <artifactId>backend</artifactId>
+        <version>1.6-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>lab-ear</artifactId>
+    <version>1.6-SNAPSHOT</version>
+    <packaging>ear</packaging>
+    <name>NGP: EAR</name>
+    <build>
+        <finalName>lab6-ear</finalName>
+        <plugins>
+            <plugin>
+                <artifactId>maven-ear-plugin</artifactId>
+                <version>2.10.1</version>
+                <configuration>
+                    <version>6</version>
+                    <defaultLibBundleDir>lib</defaultLibBundleDir>
+                    <modules>
+                        <ejbModule>
+                            <groupId>ro.ulbs.ip.an3</groupId>
+                            <artifactId>lab-db</artifactId>
+                            <bundleFileName>lab-db.jar</bundleFileName>
+                            <unpack>true</unpack>
+                        </ejbModule>
+                        <webModule>
+                            <groupId>ro.ulbs.ip.an3</groupId>
+                            <artifactId>lab-rest</artifactId>
+                            <bundleFileName>restservices.war</bundleFileName>
+                            <contextRoot>/restservices</contextRoot>
+                            <unpack>true</unpack>
+                        </webModule>
+                    </modules>
+                    <archive>
+                        <manifest>
+                            <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
+                        </manifest>
+                        <manifestEntries>                            
+                            <TimeStamp>${BUILD_ID}</TimeStamp>
+                            <BuildNumber>${BUILD_NUMBER}</BuildNumber>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>ro.ulbs.ip.an3</groupId>
+            <artifactId>lab-db</artifactId>
+            <type>ejb</type>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>ro.ulbs.ip.an3</groupId>
+            <artifactId>lab-rest</artifactId>
+            <type>war</type>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+    <properties>
+        <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+</project>

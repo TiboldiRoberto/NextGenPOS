@@ -24,7 +24,10 @@
         <div class="container">
             <f:view id="masterindexId">
                 <h:form id="masterForm">
-                    <br/><br/>
+                    <br/> 
+                    <h:commandButton value="Admin View" action="/action1" type="submit"/>
+                    <br/>
+                    <br/>
                 </h:form>
             </f:view>
 
@@ -58,20 +61,7 @@
                             <f:facet name="header">Quantity</f:facet>
                             <h:outputText value="#{prod.quantity}"/>
                         </h:column>
-                        <h:column>
-                            <f:facet name="header">Action</f:facet>
-                            <h:commandButton value="Delete" action="#{prodMBean.startDelete}">
-                                <f:setPropertyActionListener value="#{prod}" target="#{prodMBean.selected}"/>
-                            </h:commandButton>
-                            <h:commandButton value="Edit" action="#{prodMBean.startEdit}">
-                                <f:setPropertyActionListener value="#{prod}" target="#{prodMBean.selected}"/>
-                            </h:commandButton> 
-                        </h:column>
                     </h:dataTable>
-
-                    <h:commandButton value="New product" action="#{prodMBean.startCreate}"/>
-                    <h:outputText value="  Product creat cu succes: " rendered="#{prodMBean.createdId != null}"/>
-                    <h:outputText value="#{prodMBean.createdId}" rendered="#{prodMBean.createdId != null}"/>
                 </h:form>
             </f:view> 
         </div>

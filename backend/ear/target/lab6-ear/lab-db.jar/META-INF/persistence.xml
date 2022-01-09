@@ -4,6 +4,7 @@
     <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
     <jta-data-source>jdbc/lab5res</jta-data-source>
     <class>ro.ulbs.ip.an3.nextgenpos.db.Product</class>
+    <class>ro.ulbs.ip.an3.nextgenpos.db.User</class>
     <properties>
       <property name="eclipselink.target-database" value="Derby"/>
       <property name="eclipselink.weaving" value="static"/>

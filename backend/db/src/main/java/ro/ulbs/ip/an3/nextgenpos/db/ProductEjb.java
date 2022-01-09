@@ -3,7 +3,6 @@ package ro.ulbs.ip.an3.nextgenpos.db;
 import java.util.ArrayList;
 import java.util.List;
 import javax.ejb.Stateless;
-import javax.ejb.EJB;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 

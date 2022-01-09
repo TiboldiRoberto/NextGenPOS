@@ -20,6 +20,8 @@ public class UserEjb {
         return em;
     }
     
+    //In all te sql querrys need to insert the class name and NOT the table name
+    
     public List<User> getList() {
         EntityManager manager = getEntityManager();
         List<User> users = new ArrayList<>();
@@ -31,5 +33,40 @@ public class UserEjb {
          t.printStackTrace();
          }
         return users;
+    }
+    
+    public User findById(Integer id)
+    {
+        EntityManager manager = getEntityManager();
+        User user = (User) manager
+                .createQuery("SELECT u FROM User u WHERE u.id = :param")
+                .setParameter("param", id)
+                .getSingleResult();
+        return user;
+    }
+    
+    public Integer createUsers(User user) {
+        EntityManager manager = getEntityManager();
+        manager.persist(user);
+        manager.flush();
+        return user.getId();
+    }
+    
+    public User updateUsers(User user)
+    {
+        EntityManager manager = getEntityManager();
+        manager.merge(user);
+        return user;
+    }
+    
+    public void deleteUsers(Integer id){
+        EntityManager manager = getEntityManager();
+        User user =  findById(id);
+        if(user != null){
+            manager.remove(user);
+        }
+        else {
+            throw new RuntimeException("Not found ID="+id);
+        }
     }
 }

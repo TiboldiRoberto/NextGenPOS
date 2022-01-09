@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+       xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+        <title>User Deletion</title>
+        <style type="text/css">
+            table {
+                margin-right: auto;
+                margin-left: auto;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            th, td {
+                padding: 15px;
+                vertical-align: middle;
+                text-align: center;
+            }
+            .container {
+                width: 400px;
+                margin-right: auto;
+                margin-left: auto;
+                border: 1px solid dodgerblue;              
+                height: 400px;
+            }
+            p{
+                margin-left: 5px;
+            }
+        </style>
+    </h:head>
+    
+    <h:body>
+        <div class="container">
+            <p>Are you sure you want to delete following User entry?</p>
+            <f:view>
+                <h:form id="UserDeleteForm">
+                     <table>
+                            <tr>
+                                <th>Username</th>
+                                <td><h:inputText value="#{userMBean.selected.username}"/></td>
+                            </tr>
+                            <tr>
+                                <th>Password</th>
+                                <td><h:inputText value="#{userMBean.selected.password}"/></td>
+                            </tr>
+                            <tr>
+                                <th>Type</th>
+                                <td><h:inputText value="#{userMBean.selected.type}"/></td>
+                            </tr>
+                             <tr>
+                                <td> <ui:include src="/goBack.xhtml"/></td>
+                                <td> <h:commandButton value="Delete" action="#{userMBean.endDelete}"/></td>
+                            </tr>
+                    </table>                  
+                </h:form>
+            </f:view>
+        </div>
+    </h:body>
+    
+</html>

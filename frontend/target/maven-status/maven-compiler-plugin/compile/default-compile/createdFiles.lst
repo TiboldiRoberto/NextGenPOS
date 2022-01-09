@@ -1,6 +1,10 @@
+ro\ulbs\ip\an3\nextgenpos\frontend\UsersRest.class
+ro\ulbs\ip\an3\nextgenpos\frontend\UsersDto.class
+ro\ulbs\ip\an3\nextgenpos\frontend\ProductsRest$1.class
+ro\ulbs\ip\an3\nextgenpos\frontend\UsersRest$1.class
 ro\ulbs\ip\an3\nextgenpos\frontend\TestProductsRestServlet.class
 ro\ulbs\ip\an3\nextgenpos\frontend\ProductsDto.class
+ro\ulbs\ip\an3\nextgenpos\frontend\UsersMBean.class
 ro\ulbs\ip\an3\nextgenpos\frontend\ProductsRest.class
 ro\ulbs\ip\an3\nextgenpos\frontend\ProductsMBean.class
-ro\ulbs\ip\an3\nextgenpos\frontend\ProductsRest$1.class
 ro\ulbs\ip\an3\nextgenpos\frontend\ProductsRest$2.class

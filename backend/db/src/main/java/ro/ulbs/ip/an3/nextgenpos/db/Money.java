@@ -12,8 +12,8 @@ package ro.ulbs.ip.an3.nextgenpos.db;
 public class Money {
     private int value;
 
-    public Money(int val) {
-        this.value = val;
+    public Money(int newValue) {
+        this.value = newValue;
     }
 
     public Money() {
@@ -24,16 +24,15 @@ public class Money {
         return value;
     }
 
-    public Money times(int quantity) {
-        return new Money(this.value * quantity);
+    public int times(int quantity) {
+        return this.value * quantity;
     }
-    // to DO
 
     public Money minus(Money total) {
         return new Money( this.getAmount() - total.getAmount());
     }
 
-    public Money add(Money subtotal) {
-        return new Money(this.getAmount() + subtotal.getAmount());
+    public int add(int subtotal) {
+        return this.getAmount() + subtotal;
     }
 }

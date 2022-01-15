@@ -32,7 +32,13 @@ public class SaleEjb {
         }catch (Throwable t) {
             t.printStackTrace();
         }
-      
         return sales;
+    }
+    
+    public Integer createSale(Sale sale) {
+        EntityManager manager = getEntityManager();
+        manager.persist(sale);
+        manager.flush();
+        return sale.getId_sale();
     }
 }

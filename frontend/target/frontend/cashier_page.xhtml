@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"   
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <h:head>
+        <title>Cashier</title>
+        <style type="text/css">
+            th, td {
+                padding: 15px;
+            }
+            .container {
+                width: 400px;
+                margin-right: auto;
+                margin-left: auto;
+
+                height: 400px;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <div class="container">
+            <f:view>
+                <h:form id="prodFilterForm">
+                    Filter by Name: 
+                    <h:inputText value="#{prodMBean.filterText}"/> 
+                    <h:commandLink value="Search" action="#{prodMBean.filter}" type="submit"/>
+                </h:form>
+                <br/>
+                <br/>
+                <h:form>
+                <h:commandButton value="Start Sale" />
+                </h:form>
+                <br/>
+                <h:form id="prodForm">
+                    <h:dataTable value="#{prodMBean.products}"  var="prod">
+                        <h:column>
+                            <f:facet name="header">Name</f:facet>
+                            <h:outputText value="#{prod.name}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">Unit</f:facet>
+                            <h:outputText value="#{prod.unit}"/>
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">unit Price</f:facet>
+                            <h:outputText value="#{prod.unitPrice}"/>
+                        </h:column>
+                        <h:column>
+                            <h:commandButton value="Add" /> <!-- action="{prodMBean.startCreate}"-->
+                        </h:column>
+                    </h:dataTable>
+                </h:form>
+                <h:form>
+                    <h:commandButton value="End Sale" /> 
+                </h:form>
+            </f:view> 
+        </div>
+    </h:body>
+</html>

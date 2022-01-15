@@ -1,11 +1,11 @@
 Manifest-Version: 1.0
-Implementation-Title: NGP: REST backend services
-BuildNumber: 
-Implementation-Version: 1.6-SNAPSHOT
-Built-By: Roberto
-Implementation-Vendor-Id: ro.ulbs.ip.an3
-RevisionNumber: 
 Created-By: Apache Maven 3.6.3
-Build-Jdk: 1.8.0_172
+Built-By: user
+Build-Jdk: 11.0.8
+Implementation-Title: NGP: REST backend services
+Implementation-Version: 1.6-SNAPSHOT
+Implementation-Vendor-Id: ro.ulbs.ip.an3
+BuildNumber: 
+RevisionNumber: 
 TimeStamp: 
 

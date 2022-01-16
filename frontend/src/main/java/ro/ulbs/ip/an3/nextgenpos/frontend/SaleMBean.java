@@ -16,15 +16,17 @@ public class SaleMBean implements Serializable{
     private static final long serialVersionUID = 10112;
     @EJB
     private SalesRest restClient;
+    private SalesDto selectedProduct;
+    private Integer createdId;
 
     public SaleMBean() {
     }
     
     
     public String startCreate() {
-        isCreate = true;
         createdId = null;
-        selectedProduct = new ProductsDto();
-        return "product_create";
+        selectedProduct = new SalesDto();
+        createdId = restClient.create(selectedProduct);
+        return "cashier_page";
     }
 }

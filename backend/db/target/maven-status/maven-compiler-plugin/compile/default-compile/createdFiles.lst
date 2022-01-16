@@ -1,4 +1,11 @@
+ro\ulbs\ip\an3\nextgenpos\db\CategoryHasProduct.class
 ro\ulbs\ip\an3\nextgenpos\db\ProductEjb.class
-ro\ulbs\ip\an3\nextgenpos\db\User.class
 ro\ulbs\ip\an3\nextgenpos\db\UserEjb.class
+ro\ulbs\ip\an3\nextgenpos\db\Sale.class
+ro\ulbs\ip\an3\nextgenpos\db\SaleLineItem.class
+ro\ulbs\ip\an3\nextgenpos\db\Category.class
+ro\ulbs\ip\an3\nextgenpos\db\CategoryEjb.class
+ro\ulbs\ip\an3\nextgenpos\db\User.class
 ro\ulbs\ip\an3\nextgenpos\db\Product.class
+ro\ulbs\ip\an3\nextgenpos\db\Money.class
+ro\ulbs\ip\an3\nextgenpos\db\SaleEjb.class

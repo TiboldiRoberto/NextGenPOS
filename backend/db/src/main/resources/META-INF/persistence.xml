@@ -5,6 +5,9 @@
     <jta-data-source>jdbc/lab5res</jta-data-source>
     <class>ro.ulbs.ip.an3.nextgenpos.db.Product</class>
     <class>ro.ulbs.ip.an3.nextgenpos.db.User</class>
+    <class>ro.ulbs.ip.an3.nextgenpos.db.Sale</class>
+    <class>ro.ulbs.ip.an3.nextgenpos.db.Category</class>
+    <exclude-unlisted-classes>false</exclude-unlisted-classes>
     <properties>
       <property name="eclipselink.target-database" value="Derby"/>
       <property name="eclipselink.weaving" value="static"/>

@@ -21,9 +21,14 @@
                         <a class="nav-link" href="${pageContext.request.contextPath}/TestUsersRestServlet">Users</a>
                     </li>
                     </c:if>
-                    <c:if test="${pageContext.request.isUserInRole('ClientRole')}">
+                    <c:if test="${pageContext.request.isUserInRole('AdminRole')}">
                     <li class="nav-item ${activePage eq 'Users' ? 'active' : ''}">
                         <a class="nav-link" href="${pageContext.request.contextPath}/admin_page.xhtml">Admin</a>
+                    </li>
+                    </c:if>
+                    <c:if test="${pageContext.request.isUserInRole('ClientRole')}">
+                    <li class="nav-item ${activePage eq 'Users' ? 'active' : ''}">
+                        <a class="nav-link" href="${pageContext.request.contextPath}/cashier_page.xhtml">Cashier</a>
                     </li>
                     </c:if>
 <!--                    <li class="nav-item">

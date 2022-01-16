@@ -46,6 +46,10 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
                 <h:form id="UserCreateOrEditForm">
                     <table>
                             <tr>
+                                <th>Email</th>
+                                <td><h:inputText value="#{userMBean.selected.email}"/></td>
+                            </tr>
+                            <tr>
                                 <th>UserName</th>
                                 <td><h:inputText value="#{userMBean.selected.username}"/></td>
                             </tr>
@@ -55,10 +59,9 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit t
                             </tr>
                             <tr>
                                 <th>Type</th>
-                                <td><h:inputText value="#{userMBean.selected.type}"/></td>
+                                <td><h:inputText value="#{userMBean.selected.position}"/></td>
                             </tr>
                             <tr>
-                                <td> <ui:include src="/goBack.xhtml"/></td>
                                 <td><h:commandButton value="Create" action="#{userMBean.endCreate}" rendered="#{userMBean.isCreate}"/></td>
                             </tr>
                     </table>

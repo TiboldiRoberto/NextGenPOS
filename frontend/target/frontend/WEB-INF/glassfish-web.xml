@@ -4,4 +4,22 @@
      "http://www.sun.com/software/appserver/dtds/sun-web-app_3_0-0.dtd">
 <glassfish-web-app error-url="">
     <context-root>/frontend</context-root>
+    
+    <class-loader delegate = "true"/>
+    <jsp-config>
+        <property name="keepgenerated" value ="true">
+            <description> Keep a copy of the generated servlet class </description>
+        </property>
+    </jsp-config>
+    
+    <security-role-mapping>
+        <role-name>AdminRole</role-name>
+        <group-name>ADMINISTRATOR</group-name>
+    </security-role-mapping>
+    <security-role-mapping>
+        <role-name>ClientRole</role-name>
+        <group-name>ADMINISTRATOR</group-name>
+        <group-name>CLIENT</group-name>
+    </security-role-mapping>
+    
 </glassfish-web-app>

@@ -24,7 +24,7 @@ public class Product implements Serializable{
      
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id_product")
+    @Column(name = "ID_PRODUCT")
     private Integer id;
 
     @Column(name="Name")
@@ -33,7 +33,7 @@ public class Product implements Serializable{
     @Column(name="Unit")
     private String unit;
     
-    @Column(name="Price_unit")
+    @Column(name="UnitPrice")
     private Integer unitPrice;
     
     @Column(name="Quantity")
@@ -85,4 +85,5 @@ public class Product implements Serializable{
     public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
+
 }

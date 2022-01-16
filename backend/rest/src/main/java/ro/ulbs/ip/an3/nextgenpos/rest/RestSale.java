@@ -10,12 +10,14 @@ import javax.ejb.EJB;
 import javax.ejb.Stateless;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.GET;
+import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.UriInfo;
+import ro.ulbs.ip.an3.nextgenpos.db.Product;
 import ro.ulbs.ip.an3.nextgenpos.db.Sale;
 import ro.ulbs.ip.an3.nextgenpos.db.SaleEjb;
 
@@ -43,4 +45,14 @@ public class RestSale {
         List<Sale> sales = salesEjb.getList();
         return Response.ok(sales).build();
     }
+    
+    @PUT
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response newSale(Sale sale)
+    {
+        Integer id = salesEjb.createSale(sale);
+        return Response.ok(id).build();
+    }
+    
 }

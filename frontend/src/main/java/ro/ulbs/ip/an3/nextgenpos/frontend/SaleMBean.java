@@ -7,11 +7,15 @@ package ro.ulbs.ip.an3.nextgenpos.frontend;
 
 import java.io.Serializable;
 import javax.ejb.EJB;
+import javax.enterprise.context.SessionScoped;
+import javax.inject.Named;
 
 /**
  *
  * @author user
  */
+@SessionScoped
+@Named("saleMBean")
 public class SaleMBean implements Serializable{
     private static final long serialVersionUID = 10112;
     @EJB

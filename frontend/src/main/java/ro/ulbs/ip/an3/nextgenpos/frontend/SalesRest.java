@@ -21,7 +21,7 @@ import javax.ws.rs.core.Response;
  */
 @Stateless
 @LocalBean
-class SalesRest {
+public class SalesRest {
     private static final String BASE_URI = "http://localhost:8080/restservices/sales";
     private final WebTarget webTarget;
     private final Client client;

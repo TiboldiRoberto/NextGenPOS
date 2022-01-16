@@ -42,7 +42,7 @@ public class ProductEjb {
     {
         EntityManager manager = getEntityManager();
         Product prod = (Product) manager
-                .createQuery("SELECT p FROM Product p WHERE p.id = :param")
+                .createQuery("SELECT p FROM Product p WHERE p.id_product = :param")
                 .setParameter("param", id)
                 .getSingleResult();
         return prod;   

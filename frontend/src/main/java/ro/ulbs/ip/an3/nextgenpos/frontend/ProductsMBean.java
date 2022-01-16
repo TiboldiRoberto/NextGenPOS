@@ -65,7 +65,7 @@ public class ProductsMBean implements Serializable {
     public String endCreate() {
         createdId = restClient.create(selectedProduct);
         isCreate = false;
-        return "index";
+        return "admin_page";
     }
 
     public boolean isIsCreate() {
@@ -98,7 +98,7 @@ public class ProductsMBean implements Serializable {
     
     public String endEdit() {
         restClient.edit(selectedProduct);
-        return "index";
+        return "admin_page";
     }
     
     public String startDelete() {
@@ -113,7 +113,7 @@ public class ProductsMBean implements Serializable {
         } catch (Exception e) {
             FacesContext.getCurrentInstance().addMessage("prodFilterForm", new FacesMessage("Error",e.getMessage()));
         }
-        return "index";
+        return "admin_page";
     }
     
     

@@ -8,10 +8,8 @@
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 
-
-
 <t:pageTemplate pageTitle="Users">
-    <h1>Users</h1>
+    <h2>Users</h2>
     <c:forEach var="user" items="${users}" varStatus="status">
          <div class="row">
             <div class="col-md-4">
@@ -25,8 +23,5 @@
             </div>
         </div>
     </c:forEach>
-    
-    <h5>Free users spots: ${numberOfFreeUsersSpots}</h5>
-    
 </t:pageTemplate>
 

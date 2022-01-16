@@ -49,7 +49,7 @@ public class UsersMBean implements Serializable {
     public String endCreate() {
         createdId = restClient.create(selectedUser);
         isCreate = false;
-        return "index";
+        return "admin_page";
     }
 
     public boolean isIsCreate() {
@@ -82,7 +82,7 @@ public class UsersMBean implements Serializable {
     
     public String endEdit(){
         restClient.edit(selectedUser);
-        return "index";
+        return "admin_page";
     }
     
     public String startDelete(){
@@ -98,7 +98,7 @@ public class UsersMBean implements Serializable {
     // Maybe some problems here !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!        
             FacesContext.getCurrentInstance().addMessage("userFilterForm", new FacesMessage("Error",e.getMessage()));
         }
-        return "index"; // Modify to the admin page  
+        return "admin_page"; // Modify to the admin page  
     }
     
     

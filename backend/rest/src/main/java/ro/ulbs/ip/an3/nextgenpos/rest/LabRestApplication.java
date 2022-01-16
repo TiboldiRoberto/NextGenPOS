@@ -21,6 +21,8 @@ public class LabRestApplication extends Application {
         // register root resource
         resources.add(RestProducts.class);
         resources.add(RestUsers.class);
+        resources.add(RestSale.class);
+        resources.add(RestCategory.class);
         return resources;
     }
    

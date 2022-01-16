@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/XHtml.xhtml to edit this template
+-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <head>
+        <title>Cashier Page</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <style>
+            .container {
+                width: 400px;
+                margin-right: auto;
+                margin-left: auto;
+
+                height: 400px;
+            }     
+            .button {
+                background-color: white;
+                border: none;
+                color: black;
+                padding: 16px 32px;
+                text-align: center;
+                display: inline-block;
+                font-size: 16px;
+                margin: 4px 2px;
+                cursor: pointer;
+                transition-duration: 0.4s;
+                border: 2px solid #008CBA;
+            }
+            .button:hover {
+                background-color: #008CBA;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+        <h2>Homepage</h2>
+            <p>Hello! :)</p>
+            <br/>
+            <h:form>
+                <h:commandButton value="Sell" action="/admin_page" type="submit" styleClass="button" />
+                <h:commandButton value="Return" action="/cashier_page" type="submit" styleClass="button" />
+            </h:form>
+            
+        </div>
+    </body>
+</html>

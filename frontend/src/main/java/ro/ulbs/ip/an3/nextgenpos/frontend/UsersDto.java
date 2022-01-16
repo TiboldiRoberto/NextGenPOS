@@ -11,9 +11,10 @@ package ro.ulbs.ip.an3.nextgenpos.frontend;
 public class UsersDto {
     private static final long serialVersionUID = 1111L;
     private Integer id;
+    private String email;
     private String username;
     private String password;
-    private String type;
+    private String position;
     
     public UsersDto(){
     }
@@ -30,8 +31,16 @@ public class UsersDto {
         return password;
     }
 
-    public String getType() {
-        return type;
+    public String getPosition() {
+        return position;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
     
     public void setId(Integer id) {
@@ -46,7 +55,7 @@ public class UsersDto {
         this.password = password;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setPosition(String position) {
+        this.position = position;
     }
 }

@@ -1,9 +1,13 @@
 ro\ulbs\ip\an3\nextgenpos\frontend\ProductServlet.class
+ro\ulbs\ip\an3\nextgenpos\frontend\SalesRest$1.class
 ro\ulbs\ip\an3\nextgenpos\frontend\TestProductsRestServlet.class
 ro\ulbs\ip\an3\nextgenpos\frontend\ProductsDto.class
 ro\ulbs\ip\an3\nextgenpos\frontend\UsersMBean.class
+ro\ulbs\ip\an3\nextgenpos\frontend\SalesDto.class
 ro\ulbs\ip\an3\nextgenpos\frontend\ProductsRest$2.class
 ro\ulbs\ip\an3\nextgenpos\frontend\UsersRest.class
+ro\ulbs\ip\an3\nextgenpos\frontend\SaleMBean.class
+ro\ulbs\ip\an3\nextgenpos\frontend\SalesRest.class
 ro\ulbs\ip\an3\nextgenpos\frontend\UsersDto.class
 ro\ulbs\ip\an3\nextgenpos\frontend\Login.class
 ro\ulbs\ip\an3\nextgenpos\frontend\ProductsRest$1.class

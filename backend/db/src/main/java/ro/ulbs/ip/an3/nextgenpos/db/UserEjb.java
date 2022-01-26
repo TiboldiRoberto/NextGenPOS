@@ -51,6 +51,18 @@ public class UserEjb {
         manager.flush();
         return user.getId();
     }
+        
+    public void createUsers(String username, String email, String passwordSha256, String position) {
+        EntityManager manager = getEntityManager();
+        User user = new User();
+        
+        user.setUsername(username);
+        user.setEmail(email);
+        user.setPassword(passwordSha256);
+        user.setPosition(position);
+        
+        manager.persist(user);
+    }
     
     public User updateUsers(User user)
     {

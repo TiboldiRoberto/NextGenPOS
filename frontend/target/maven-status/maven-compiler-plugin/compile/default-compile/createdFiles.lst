@@ -5,6 +5,7 @@ ro\ulbs\ip\an3\nextgenpos\frontend\ProductsDto.class
 ro\ulbs\ip\an3\nextgenpos\frontend\UsersMBean.class
 ro\ulbs\ip\an3\nextgenpos\frontend\SalesDto.class
 ro\ulbs\ip\an3\nextgenpos\frontend\ProductsRest$2.class
+ro\ulbs\ip\an3\nextgenpos\frontend\PasswordUtil.class
 ro\ulbs\ip\an3\nextgenpos\frontend\UsersRest.class
 ro\ulbs\ip\an3\nextgenpos\frontend\SaleMBean.class
 ro\ulbs\ip\an3\nextgenpos\frontend\SalesRest.class
@@ -16,3 +17,4 @@ ro\ulbs\ip\an3\nextgenpos\frontend\Logout.class
 ro\ulbs\ip\an3\nextgenpos\frontend\ProductsRest.class
 ro\ulbs\ip\an3\nextgenpos\frontend\ProductsMBean.class
 ro\ulbs\ip\an3\nextgenpos\frontend\TestUsersRestServlet.class
+ro\ulbs\ip\an3\nextgenpos\frontend\AddUser.class
